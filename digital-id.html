@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Digital Tourist ID - SafeTour</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="digital-id.css" />
+  <script>
+    function updatePreview() {
+      const fullName = document.getElementById('fullName').value || 'Full Name';
+      const email = document.getElementById('email').value || 'email@example.com';
+      const passport = document.getElementById('passport').value || 'XXXXX';
+      const phone = document.getElementById('phone').value || '+91 XXXXX XXXXX';
+      const emergency = document.getElementById('emergency').value || 'Emergency Contact';
+
+      document.getElementById('previewName').textContent = fullName;
+      document.getElementById('previewEmail').textContent = email;
+      document.getElementById('previewPassport').textContent = "Passport No.: " + passport;
+      document.getElementById('previewPhone').textContent = phone;
+      document.getElementById('previewEmergency').textContent = emergency;
+    }
+
+    function handleImage(event) {
+      const formPic = document.getElementById('formPhotoPreview');
+      const cardPic = document.getElementById('cardPhotoPreview');
+      if (event.target.files && event.target.files[0]) {
+        const newSrc = URL.createObjectURL(event.target.files[0]);
+        formPic.src = newSrc;
+        cardPic.src = newSrc;
+      } else {
+        formPic.src = "https://i.pravatar.cc/120";
+        cardPic.src = "https://i.pravatar.cc/120";
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="digital-id-hero">
+    <div class="digital-id-hero-content">
+      <h1>Digital Tourist ID Registration</h1>
+      <p class="digital-id-tagline">One ID for every journey: Safe, Smart, Secure.</p>
+    </div>
+  </div>
+
+  <main class="digital-id-page container">
+    <section class="digital-id-formcard">
+      
+      <form>
+        <label for="fullName">Full Name</label>
+        <input id="fullName" type="text" placeholder="Enter full name" oninput="updatePreview()" required />
+
+        <label for="email">Email Address</label>
+        <input id="email" type="email" placeholder="Enter email" oninput="updatePreview()" required />
+
+        <label for="passport">Passport Number</label>
+        <input id="passport" type="text" placeholder="Enter Passport No." oninput="updatePreview()" required />
+
+        <label for="phone">Phone Number</label>
+        <input id="phone" type="tel" placeholder="Enter phone number" oninput="updatePreview()" required />
+
+        <label for="emergency">Emergency Contact Info</label>
+        <input id="emergency" type="text" placeholder="Emergency contact number" oninput="updatePreview()" />
+
+        <label for="photo">Upload Photo</label>
+        <input type="file" id="photo" accept="image/*" onchange="handleImage(event)" />
+
+        <div class="consent-row">
+          <input type="checkbox" id="consent" required />
+          <label for="consent" style="font-size:14px;">Consent to Terms</label>
+        </div>
+        <button type="submit" class="btn-primary">Submit</button>
+      </form>
+    </section>
+
+    <section class="digital-id-previewcard">
+      <div class="idcard-outer">
+        <div class="id-profilepic">
+          <img id="cardPhotoPreview" src="https://i.pravatar.cc/120" alt="Profile Photo" />
+        </div>
+        <div class="idcard-content">
+          <span class="idcard-title" id="previewName">Full Name</span>
+          <div class="idcard-field" id="previewEmail">email@example.com</div>
+          <div class="idcard-field" id="previewPassport">Passport No.: XXXXX</div>
+          <div class="idcard-field" id="previewPhone">+91 XXXXX XXXXX</div>
+          <div class="idcard-field" id="previewEmergency">Emergency Contact</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 SafeTour — All rights reserved</p>
+      <ul>
+        <li><a href="index.html#privacy">Privacy</a></li>
+        <li><a href="index.html#terms">Terms</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
