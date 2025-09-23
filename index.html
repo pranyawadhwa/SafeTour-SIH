@@ -14,19 +14,38 @@
             <div class="logo">SafeTour</div>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#guides">Guides</a></li>
-                    <li><a href="#dashboard">Dashboard</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                    <li><select class="lang-selector">
-                            <option>EN</option>
-                            <option>HI</option>
-                            <option>BN</option>
-                        </select></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Features</a>
+                        <div class="dropdown-content">
+                            <a href="digital-id.html">Digital Tourist ID</a>
+                            <a href="geo-fencing.html">Geo-fencing Alerts</a>
+                            <a href="panic-button.html">Panic Button</a>
+                            <a href="ai-anomaly.html">AI Anomaly Detection</a>
+                            <a href="multilingual-chatbot.html">Multilingual Chatbot</a>
+                            <a href="offline-sms.html">Offline Emergency SMS</a>
+                        </div>
+                    </li>
+                    <li><a href=#guides>Guides</a></li>
+                    <li><a href=#dashboard>Dashboard</a></li>
+                    <li><a href=#contact>Contact Us</a></li>
+                    <li>
+                        <select class="lang-selector">
+                            <option>ENG</option>
+                            <option>HIN</option>
+                            <option>ASM</option>
+                            <option>GUJ</option>
+                            <option>PUN</option>
+                            <option>BEN</option>
+                            <option>TEL</option>
+                            <option>TAM</option>
+                            <option>URD</option>
+                        </select>
+                    </li>
                     <li><a href="#" class="btn-login">Login</a></li>
                 </ul>
             </nav>
+
         </div>
     </header>
 
@@ -38,58 +57,78 @@
         </div>
     </section>
 
-    <section id="features" class="features container">
-        <h2>Features</h2>
-        <div class="feature-cards">
-            <a href="digital-id.html" class="card">
-                <h3>Digital Tourist ID</h3>
-                <p>Secure and verifiable identity for every traveler</p>
-            </a>
-            <a href="geo-fencing.html" class="card">
-                <h3>Geo-fencing Alerts</h3>
-                <p>Real-time warnings on entering risk zones</p>
-            </a>
-            <a href="panic-button.html" class="card">
-                <h3>Panic Button</h3>
-                <p>Instant location sharing with emergency contacts</p>
-            </a>
-            <a href="ai-anomaly.html" class="card">
-                <h3>AI Anomaly Detection</h3>
-                <p>Automatic detection of unusual behaviors</p>
-            </a>
-            <a href="multilingual-chatbot.html" class="card">
-                <h3>Multilingual Chatbot</h3>
-                <p>Quick help in 10+ languages</p>
-            </a>
-            <a href="offline-sms.html" class="card">
-                <h3>Offline Emergency SMS</h3>
-                <p>Alerts even without internet connectivity</p>
-            </a>
+    <!-- Geo Fencing Section -->
+    <section id="geo-fencing" class="feature-replacement container">
+        <div class="left-side">
+            <h2>Geo Fencing</h2>
+            <p>Get real-time notifications when you step into unsafe or restricted areas.
+Stay aware of your surroundings and travel with confidence.</p>
+        </div>
+        <div class="gfa-map-card">
+      <div class="gfa-map-placeholder">
+        MAP VIEW
+      </div>
+    </div>
+    </section>
+
+    <!-- Digital Tourist ID Section -->
+    <section id="digital-id" class="feature-replacement container">
+        <section class="digital-id-previewcard">
+      <div class="idcard-outer">
+        <div class="id-profilepic">
+          <img id="cardPhotoPreview" src="https://i.pravatar.cc/120" alt="Profile Photo" />
+        </div>
+        <div class="idcard-content">
+          <span class="idcard-title" id="previewName">Full Name</span>
+          <div class="idcard-field" id="previewEmail">email@example.com</div>
+          <div class="idcard-field" id="previewPassport">Passport No.: XXXXX</div>
+          <div class="idcard-field" id="previewPhone">+91 XXXXX XXXXX</div>
+          <div class="idcard-field" id="previewEmergency">Emergency Contact</div>
+        </div>
+      </div>
+    </section>
+        <div class="right-side">
+            <h2>Digital Tourist ID Registration</h2>
+            <p>Your digital passport for a smoother travel experience.
+Quick registration, secure access, and peace of mind.</p>
         </div>
     </section>
 
-    <a href="multilingual-chatbot.html" class="chatbot-icon" title="Chat with us!">
-        💬
-    </a>
+
 
 
     <section id="guides" class="container guides">
-        <h2>Verified Local Guides</h2>
-        <input type="search" placeholder="Search guides by location..." />
-        <div class="guides-list">
-            <div class="guide-card">
-                <h4>Ammie Doe</h4>
-                <p>Experienced mountain guide - ★★★★★</p>
-            </div>
-            <div class="guide-card">
-                <h4>Priya Singh</h4>
-                <p>Cultural tour expert - ★★★★☆</p>
-            </div>
-            <div class="guide-card">
-                <h4>Raj Patel</h4>
-                <p>Wildlife safari specialist - ★★★★★</p>
-            </div>
-        </div>
+        <section id="guides" class="container guides">
+  <h2>Verified Local Guides</h2>
+  <input type="search" placeholder="Search guides by location..." />
+
+  <div class="guides-list">
+    <!-- Guide Card Example -->
+    <div class="guide-card">
+      <img class="guide-photo" src="guide1.png" alt="Ammie Doe" />
+      <h4>Ammie Doe</h4>
+      <p class="speciality">Experienced mountain guide</p>
+      <p class="languages"><span>Languages:</span> English, Hindi</p>
+      <p class="rating">★★★★★</p>
+    </div>
+    <div class="guide-card">
+      <img class="guide-photo" src="guide2.png" alt="Priya Singh" />
+      <h4>Priya Singh</h4>
+      <p class="speciality">Cultural tour expert</p>
+      <p class="languages"><span>Languages:</span> English, Bengali, Assamese</p>
+      <p class="rating">★★★★☆</p>
+    </div>
+    <div class="guide-card">
+      <img class="guide-photo" src="guide3.webp" alt="Raj Patel" />
+      <h4>Raj Patel</h4>
+      <p class="speciality">Wildlife safari specialist</p>
+      <p class="languages"><span>Languages:</span> English, Gujarati</p>
+      <p class="rating">★★★★★</p>
+    </div>
+    <!-- Add more guide cards as needed -->
+  </div>
+</section>
+
     </section>
 
     <section id="dashboard" class="container dashboard-preview">
@@ -108,6 +147,11 @@
         <p>Email: support@safetour.app</p>
         <p>Phone: +91 XXXXX 43210</p>
     </section>
+
+    <button id="panic-button" aria-label="Panic Button" title="Send Panic Alert">!</button>
+
+    <a href="multilingual-chatbot.html" id="chatbot-button" title="Chat with us!">💬</a>
+
 
     <footer>
         <div class="container">
