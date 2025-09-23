@@ -1,0 +1,142 @@
+/* Digital ID specific styles */
+.digital-id-hero {
+  background: #2c3e50;
+  color: #fff;
+  padding: 30px 0 30px 0;
+  border-bottom-left-radius: 28px;
+  border-bottom-right-radius: 28px;
+  box-shadow: 0 8px 22px -6px rgba(44, 62, 80, 0.10);
+  margin-bottom: -74px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.digital-id-hero-content {
+  text-align: center;
+  width: 100%;
+}
+
+.digital-id-hero h1 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.digital-id-tagline {
+  font-size: 1.18rem;
+  font-weight: 400;
+  color: #e8f8f8;
+  margin-top: 2px;
+  letter-spacing: 0.1rem;
+}
+
+.digital-id-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 54px;
+  margin-top: 0;
+  padding-bottom: 56px;
+}
+
+.digital-id-formcard {
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 8px 32px rgba(58, 167, 163, 0.15);
+  padding: 0 28px 32px 28px;
+  min-width: 350px;
+  max-width: 420px;
+  width: 100%;
+  margin-top: 74px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.digital-id-formcard form {
+  width: 100%;
+  margin-top: 42px;
+}
+
+.digital-id-formcard form label {
+  font-weight: 700;
+  font-size: 15px;
+  color: #2c3e50;
+  line-height: 1.5;
+  display: block;
+  margin-top: 16px;
+}
+
+.digital-id-formcard form input[type="text"],
+.digital-id-formcard form input[type="email"],
+.digital-id-formcard form input[type="date"],
+.digital-id-formcard form input[type="tel"] {
+  width: 100%;
+  margin: 8px 0 0 0;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1.6px solid #2c3e50;
+  font-size: 16px;
+  transition: border 0.18s;
+  background: #f7fafc;
+  box-sizing: border-box;
+}
+
+.digital-id-formcard form input[type="text"]:focus,
+.digital-id-formcard form input[type="email"]:focus,
+.digital-id-formcard form input[type="date"]:focus,
+.digital-id-formcard form input[type="tel"]:focus {
+  border: 1.6px solid #2c3e50;
+  outline: none;
+}
+
+.digital-id-formcard form input[type="file"] {
+  background: none;
+  padding: 8px 0 0 0;
+  margin-bottom: 4px;
+  border: none;
+}
+
+.digital-id-formcard .consent-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.digital-id-formcard .btn-primary {
+  width: 100%;
+  margin-top: 22px;
+  background: #2c3e50;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 14px 0;
+  transition: background 0.23s;
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.12);
+  cursor: pointer;
+}
+
+.digital-id-formcard .btn-primary:hover {
+  background: #23303f;
+}
+
+@media (max-width: 950px) {
+  .digital-id-page {
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+  }
+  
+  .digital-id-formcard,
+  .digital-id-previewcard {
+    max-width: 98vw;
+  }
+}
