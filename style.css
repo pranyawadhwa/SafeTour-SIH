@@ -1,168 +1,644 @@
-<!DOCTYPE html>
-<html lang="en">
+/* Reset base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Tourist Safety & Assistance App</title>
-    <link rel="stylesheet" href="style.css" />
-</head>
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f7fafc; /* Very soft off-white/light gray */
+  color: #1f2937; /* Dark slate text */
+  line-height: 1.6;
+  font-size: 16px;
+}
 
-<body>
-    <header>
-        <div class="container">
-            <div class="logo">SafeTour</div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropbtn">Features</a>
-                        <div class="dropdown-content">
-                            <a href="digital-id.html">Digital Tourist ID</a>
-                            <a href="geo-fencing.html">Geo-fencing Alerts</a>
-                            <a href="panic-button.html">Panic Button</a>
-                            <a href="ai-anomaly.html">AI Anomaly Detection</a>
-                            <a href="multilingual-chatbot.html">Multilingual Chatbot</a>
-                            <a href="offline-sms.html">Offline Emergency SMS</a>
-                        </div>
-                    </li>
-                    <li><a href=#guides>Guides</a></li>
-                    <li><a href=#dashboard>Dashboard</a></li>
-                    <li><a href=#contact>Contact Us</a></li>
-                    <li>
-                        <select class="lang-selector">
-                            <option>ENG</option>
-                            <option>HIN</option>
-                            <option>ASM</option>
-                            <option>GUJ</option>
-                            <option>PUN</option>
-                            <option>BEN</option>
-                            <option>TEL</option>
-                            <option>TAM</option>
-                            <option>URD</option>
-                        </select>
-                    </li>
-                    <li><a href="#" class="btn-login">Login</a></li>
-                </ul>
-            </nav>
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-        </div>
-    </header>
+/* Header */
+header {
+  background: #2c3e50; /* Dark slate blue */
+  color: white;
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
 
-    <section class="hero">
-        <div class="container">
-            <h1>Your Trusted Travel Safety Companion</h1>
-            <p>Secure Digital ID, Real-time Alerts, Multilingual Assistance</p>
-            <a href="#" class="btn-primary">Get Started</a>
-        </div>
-    </section>
+.logo {
+  font-size: 28px;
+  font-weight: 900;
+  color: #c0fdff; /* Muted rosy mauve */
+  float: left;
+  margin-left: 20px;
+  letter-spacing: 3px;
+  font-family: 'Georgia', serif;
+}
 
-    <!-- Geo Fencing Section -->
-    <section id="geo-fencing" class="feature-replacement container">
-        <div class="left-side">
-            <h2>Geo Fencing</h2>
-            <p>Get real-time notifications when you step into unsafe or restricted areas.
-Stay aware of your surroundings and travel with confidence.</p>
-        </div>
-        <div class="gfa-map-card">
-      <div class="gfa-map-placeholder">
-        MAP VIEW
-      </div>
-    </div>
-    </section>
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 20px;
+}
 
-    <!-- Digital Tourist ID Section -->
-    <section id="digital-id" class="feature-replacement container">
-        <section class="digital-id-previewcard">
-      <div class="idcard-outer">
-        <div class="id-profilepic">
-          <img id="cardPhotoPreview" src="https://i.pravatar.cc/120" alt="Profile Photo" />
-        </div>
-        <div class="idcard-content">
-          <span class="idcard-title" id="previewName">Full Name</span>
-          <div class="idcard-field" id="previewEmail">email@example.com</div>
-          <div class="idcard-field" id="previewPassport">Passport No.: XXXXX</div>
-          <div class="idcard-field" id="previewPhone">+91 XXXXX XXXXX</div>
-          <div class="idcard-field" id="previewEmergency">Emergency Contact</div>
-        </div>
-      </div>
-    </section>
-        <div class="right-side">
-            <h2>Digital Tourist ID Registration</h2>
-            <p>Your digital passport for a smoother travel experience.
-Quick registration, secure access, and peace of mind.</p>
-        </div>
-    </section>
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #3aa7a3; /* Soft teal */
+  color: white;
+}
+
+/* Language Selector */
+.lang-selector {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  font-size: 15px;
+  background-color: #3aa7a3;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.lang-selector:hover {
+  background-color: #37d7c7;
+}
+
+/* Login button */
+.btn-login {
+  background: #3aa7a3;
+  color: white;
+  padding: 8px 14px;
+  font-weight: 700;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-login:hover {
+  background: #37d7c7;
+  color: white;
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') center center/cover no-repeat;
+  height: 420px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 70px;
+  margin-top: 70px; /* header height */
+  position: relative;
+  color: white;
+  text-shadow: 0 4px 14px rgba(0, 0, 0, 0.7);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(44, 62, 80, 0.5); /* Dark overlay */
+  z-index: 1;
+}
+
+.hero > .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 52px;
+  font-weight: 900;
+  max-width: 700px;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: #3aa7a3;
+  color: white;
+  padding: 16px 36px;
+  font-weight: 700;
+  border-radius: 32px;
+  font-size: 18px;
+  box-shadow: 0 8px 30px rgba(58, 167, 163, 0.25);
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background-color: #37d7c7;
+  cursor: pointer;
+}
+
+/* Navbar Dropdown */
+nav ul li.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+nav ul li.dropdown .dropbtn {
+  cursor: pointer;
+  padding: 8px 12px;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+nav ul li.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #3aa7a3;
+  min-width: 200px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  z-index: 1001;
+}
+
+nav ul li.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+nav ul li.dropdown .dropdown-content a {
+  color: white;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  font-weight: 600;
+}
+
+nav ul li.dropdown .dropdown-content a:hover {
+  background-color: #37d7c7;
+}
+
+/* Feature Replacement Sections */
+
+.feature-replacement {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 180px 10px 180px;
+  max-width: 1000px;
+  gap: 80px;
+}
+
+.feature-replacement .left-side, .feature-replacement .right-side {
+  flex: 1;
+}
+
+.feature-replacement h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  font-weight: 900;
+  margin-bottom: 20px;
+  letter-spacing: 1.2px;
+}
+
+.feature-replacement p {
+  font-size: 1.25rem;
+  color: #465a65;
+  font-weight: 600;
+}
+
+.feature-replacement img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 8px 28px rgba(58, 167, 163, 0.3);
+}
+
+.gfa-map-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 25px rgba(44,62,80,0.13);
+  padding: 18px;
+  height: 400px;
+  width: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gfa-map-placeholder {
+  width: 380px;
+  height: 300px;
+  background: #f4f8fb;
+  border-radius: 13px;
+  border: 2.6px solid #2c3e50;
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 1.16rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 1.2px;
+  box-shadow: 0 0 20px #2c3e5070;
+}
+
+.digital-id-previewcard {
+  background: #e6f6fa;
+  box-shadow: 0 8px 32px rgba(44, 62, 80, 0.10);
+  align-items: center;
+}
+
+.digital-id-previewcard {
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 8px 32px rgba(58, 167, 163, 0.15);
+  padding: 60px;
+  min-width: 350px;
+  max-width: 420px;
+  width: 100%;
+  margin-top: 74px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.idcard-outer {
+  width: 100%;
+  max-width: 320px;
+  margin: 12px auto 12px auto;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(44, 62, 80, 0.07);
+  border-radius: 16px;
+  padding: 32px 18px;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.id-profilepic img {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #2c3e50;
+  margin-bottom: 14px;
+}
+
+.idcard-title {
+  font-weight: 700;
+  font-size: 1.17rem;
+  color: #1f2937;
+  margin-bottom: 3px;
+  letter-spacing: 0.5px;
+}
+
+.idcard-field {
+  font-size: 15px;
+  color: #2c3e50;
+  margin-bottom: 3px;
+  font-weight: 500;
+}
+/* Sticky Buttons */
+
+#panic-button {
+  position: fixed;
+  bottom: 32px;
+  left: 32px;
+  background-color: #dc3535;
+  border: none;
+  color: white;
+  font-size: 36px;
+  font-weight: 900;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 20px 4px rgba(220, 53, 53, 0.85);
+  animation: pulse 2s infinite;
+  z-index: 1002;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+#panic-button:hover {
+  background-color: #a82828;
+  box-shadow: 0 0 30px 6px rgba(220, 53, 53, 0.95);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px 4px rgba(220, 53, 53, 0.85);
+  }
+  50% {
+    box-shadow: 0 0 28px 12px rgba(220, 53, 53, 0.3);
+  }
+}
+
+#chatbot-button {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background-color: #3aa7a3;
+  color: white;
+  font-size: 28px;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  text-decoration: none;
+  z-index: 1002;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#chatbot-button:hover {
+  background-color: #37d7c7;
+}
+
+/* Responsive adjustments if needed */
+@media (max-width: 768px) {
+  .feature-replacement {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+
+/* Guides Section */
+.guides {
+  background-color: #dff1f0;
+  padding: 30px 0;
+}
+
+.guides h2 {
+  text-align: center;
+  color: #2c3e50;
+  font-weight: 900;
+  font-size: 38px;
+  margin-bottom: 26px;
+}
+
+.guides input[type="search"] {
+  display: block;
+  width: 350px;
+  max-width: 90%;
+  margin: 0 auto 40px;
+  font-size: 17px;
+  padding: 13px 20px;
+  outline: none;
+  border-radius: 30px;
+  border: 2px solid #37d7c7;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.guides input[type="search"]:focus {
+  border-color: #3aa7a3;
+  box-shadow: 0 0 10px rgba(40, 133, 119, 0.36);;
+}
+
+.guides-list {
+  display: flex;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.guide-card {
+  background-color: white;
+  box-shadow: 0 6px 18px rgba(58, 167, 163, 0.18);
+  border-radius: 14px;
+  padding: 25px 20px;
+  width: 290px;
+  cursor: default;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.guide-card:hover {
+  box-shadow: 0 12px 34px rgba(40, 133, 119, 0.36);
+}
+
+.guide-card .guide-photo {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 13px;
+  box-shadow: 0 2px 8px rgba(58, 167, 163, 0.15);
+}
+
+.guide-card h4 {
+  color: #3aa7a3;
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.guide-card .speciality {
+  font-weight: 600;
+  font-size: 15px;
+  color: #253746;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.guide-card .languages {
+  font-size: 14px;
+  color: #465a65;
+  margin-bottom: 7px;
+  text-align: center;
+}
+
+.guide-card .languages span {
+  font-weight: 700;
+  color: #3aa7a3;
+}
+
+.guide-card .rating {
+  font-size: 20px;
+  color: #ffb703;
+  font-weight: 700;
+  margin-bottom: 2px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+
+/* Dashboard Preview Section */
+.dashboard-preview {
+  padding: 60px 0 50px;
+  text-align: center;
+  background: #f0f7f7;
+}
+
+.dashboard-preview h2 {
+  font-size: 42px;
+  color: #2c3e50;
+  font-weight: 900;
+  margin-bottom: 32px;
+}
+
+/* Placeholder boxes */
+.heatmap-placeholder,
+.dashboard-snapshot {
+  background: white;
+  border-radius: 14px;
+  padding: 50px 10px;
+  max-width: 700px;
+  margin: 0 auto 25px;
+  box-shadow: 0 12px 26px rgba(58, 167, 163, 0.09);
+  font-style: italic;
+  font-weight: 700;
+  color: #64768a;
+}
+
+/* Contact Section */
+.contact {
+  background-color: #e3f0f0;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.contact h2 {
+  font-family: 'Georgia', serif;
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 22px;
+  color: #2c3e50;
+}
+
+.contact p {
+  font-weight: 600;
+  font-size: 18px;
+  color: #253746;
+  margin-bottom: 6px;
+}
+
+/* Footer */
+footer {
+  background: #2c3e50;
+  color: #f0f7fc;
+  padding: 28px 0 20px 0;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  font-size: 18px;
+}
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.footer-content .contact-info {
+  margin-bottom: 8px;
+}
+.footer-content .contact-info span {
+  display: inline-block;
+  margin: 0 20px 0 0;
+  font-weight: 600;
+  color: #e9e9e9;
+}
+.footer-meta {
+  margin-top: 7px;
+  color: #e0ebef;
+  font-size: 15px;
+}
+.footer-meta a {
+  color: #b7f2fb;
+  margin: 0 14px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.footer-meta a:hover {
+  text-decoration: underline;
+}
 
 
 
 
-    <section id="guides" class="container guides">
-        <section id="guides" class="container guides">
-  <h2>Verified Local Guides</h2>
-  <input type="search" placeholder="Search guides by location..." />
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    padding-left: 25px;
+    height: 320px;
+    text-align: center;
+    align-items: center;
+  }
 
-  <div class="guides-list">
-    <!-- Guide Card Example -->
-    <div class="guide-card">
-      <img class="guide-photo" src="guide1.png" alt="Ammie Doe" />
-      <h4>Ammie Doe</h4>
-      <p class="speciality">Experienced mountain guide</p>
-      <p class="languages"><span>Languages:</span> English, Hindi</p>
-      <p class="rating">★★★★★</p>
-    </div>
-    <div class="guide-card">
-      <img class="guide-photo" src="guide2.png" alt="Priya Singh" />
-      <h4>Priya Singh</h4>
-      <p class="speciality">Cultural tour expert</p>
-      <p class="languages"><span>Languages:</span> English, Bengali, Assamese</p>
-      <p class="rating">★★★★☆</p>
-    </div>
-    <div class="guide-card">
-      <img class="guide-photo" src="guide3.webp" alt="Raj Patel" />
-      <h4>Raj Patel</h4>
-      <p class="speciality">Wildlife safari specialist</p>
-      <p class="languages"><span>Languages:</span> English, Gujarati</p>
-      <p class="rating">★★★★★</p>
-    </div>
-    <!-- Add more guide cards as needed -->
-  </div>
-</section>
+  .hero h1 {
+    font-size: 30px;
+    letter-spacing: 1.5px;
+    max-width: 100%;
+  }
 
-    </section>
+  .hero p {
+    font-size: 18px;
+  }
 
-    <section id="dashboard" class="container dashboard-preview">
-        <h2>Safety Heatmap & Dashboard</h2>
-        <div class="heatmap-placeholder">
-            <!-- Embed map or image here -->
-            <p>Interactive heatmap will show high-risk zones here.</p>
-        </div>
-        <div class="dashboard-snapshot">
-            <p>Dashboard showing real-time clusters and alerts</p>
-        </div>
-    </section>
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-    <section id="contact" class="container contact">
-        <h2>Contact Us</h2>
-        <p>Email: support@safetour.app</p>
-        <p>Phone: +91 XXXXX 43210</p>
-    </section>
+  nav ul li {
+    margin: 8px 10px;
+  }
 
-    <button id="panic-button" aria-label="Panic Button" title="Send Panic Alert">!</button>
+  .features h2 {
+    font-size: 32px;
+  }
 
-    <a href="multilingual-chatbot.html" id="chatbot-button" title="Chat with us!">💬</a>
+  .feature-cards {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
 
+  .guides input[type="search"] {
+    width: 85%;
+  }
 
-    <footer>
-        <div class="container">
-            <p>© 2025 SafeTour — All rights reserved</p>
-            <ul>
-                <li><a href="#">Privacy</a></li>
-                <li><a href="#">Terms</a></li>
-                <li><a href="#">FAQ</a></li>
-            </ul>
-        </div>
-    </footer>
-</body>
+  .guides-list {
+    flex-direction: column;
+  }
 
-</html>
+  .guide-card {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+}
