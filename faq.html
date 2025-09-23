@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>FAQs - SafeTour</title>
+<link rel="stylesheet" href="faq.css" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo">SafeTour</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="faq.html" class="active">FAQs</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="faq-container container">
+  <h1>Frequently Asked Questions (FAQs)</h1>
+
+  <div class="faq-item">
+    <button class="faq-question">What is the SafeTour platform?</button>
+    <div class="faq-answer">
+      <p>SafeTour is a comprehensive travel safety assistance app that offers Digital Tourist ID, Geo-fencing alerts, Panic Button, AI anomaly detection, and more.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">How does the Geo-fencing alert work?</button>
+    <div class="faq-answer">
+      <p>Geo-fencing sends instant notifications when you enter unsafe or restricted zones to keep you aware and safe.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">What is a Digital Tourist ID?</button>
+    <div class="faq-answer">
+      <p>A secure digital identity that verifies travelers, making access to services and emergency response more efficient.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">How do I use the Panic Button?</button>
+    <div class="faq-answer">
+      <p>Press the Panic Button in the app or website to instantly send your location and a distress alert to your emergency contacts.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Is my personal data secure?</button>
+    <div class="faq-answer">
+      <p>Yes, SafeTour uses strong encryption and safeguards to maintain your privacy and data security.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Can I use SafeTour offline?</button>
+    <div class="faq-answer">
+      <p>Our Offline Emergency SMS feature allows you to send alerts without internet connectivity.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">How do I become a Verified Local Guide?</button>
+    <div class="faq-answer">
+      <p>Apply through our platform with your credentials, and after verification, you can serve travelers through SafeTour.</p>
+    </div>
+  </div>
+
+</main>
+
+<script>
+  const faqButtons = document.querySelectorAll('.faq-question');
+  faqButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const open = button.classList.contains('active');
+      faqButtons.forEach(btn => {
+        btn.classList.remove('active');
+        btn.nextElementSibling.style.maxHeight = null;
+      });
+      if (!open) {
+        button.classList.add('active');
+        const answer = button.nextElementSibling;
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
